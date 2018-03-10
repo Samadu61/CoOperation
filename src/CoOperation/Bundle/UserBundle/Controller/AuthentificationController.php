@@ -8,7 +8,7 @@ class AuthentificationController extends Controller
 {
     public function loginAction()
     {
-        return $this->render('CoOperationUserBundle:Authentification:login.html.twig');
+        return $this->render('@CoOperationUser/Authentification/login.html.twig');
     }
 
 }
