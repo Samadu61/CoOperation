@@ -1,0 +1,8 @@
+{
+  "name": "co-operation",
+  "version": "1.0.0",
+  "main": "app.js",
+  "repository": "https://github.com/Samadu61/CoOperation.git",
+  "author": "Samaël <villette.samael@gmail.com>",
+  "license": "MIT"
+}
