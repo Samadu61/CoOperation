@@ -47,7 +47,8 @@
         ],
         "post-update-cmd": [
             "@symfony-scripts"
-        ]
+        ],
+        "test": "simple-phpunit"
     },
     "config": {
         "platform": {

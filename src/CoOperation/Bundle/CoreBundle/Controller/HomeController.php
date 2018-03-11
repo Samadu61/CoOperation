@@ -9,6 +9,7 @@ class HomeController extends Controller
 {
     public function indexAction(Request $request)
     {
-        return $this->render('@CoOperationCore/Home/index.html.twig');
+        $content = 'Hello World';
+        return $this->render('@CoOperationCore/Home/index.html.twig', compact('content'));
     }
 }
