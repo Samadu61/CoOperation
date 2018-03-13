@@ -4,11 +4,11 @@ namespace CoOperation\Bundle\UserBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class AuthentificationController extends Controller
+class AuthenticationController extends Controller
 {
     public function loginAction()
     {
-        return $this->render('@CoOperationUser/Authentification/login.html.twig');
+        return $this->render('@CoOperationUser/Authentication/login.html.twig');
     }
 
 }

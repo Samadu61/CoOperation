@@ -4,7 +4,7 @@ namespace CoOperation\Bundle\UserBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
-class AuthentificationControllerTest extends WebTestCase
+class AuthenticationControllerTest extends WebTestCase
 {
     public function testLogin()
     {

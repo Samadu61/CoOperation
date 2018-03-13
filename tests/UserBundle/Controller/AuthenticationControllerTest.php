@@ -11,7 +11,7 @@ namespace Tests\UserBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
-class AuthentificationControllerTest extends WebTestCase
+class AuthenticationControllerTest extends WebTestCase
 {
     private $client;
 
@@ -26,7 +26,7 @@ class AuthentificationControllerTest extends WebTestCase
         $crawler = $this->client->request('GET', '/login');
         $this->assertGreaterThan(
             0,
-            $crawler->filter('html:contains("Welcome to the Authentification:login page")')->count()
+            $crawler->filter('html:contains("Welcome to the Authentication:login page")')->count()
         );
     }
 }

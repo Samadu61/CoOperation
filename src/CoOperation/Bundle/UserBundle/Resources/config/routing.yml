@@ -1,4 +1,4 @@
 login:
     path: /login
     defaults:
-        _controller: CoOperationUserBundle:Authentification:login
+        _controller: CoOperationUserBundle:Authentication:login
