@@ -1,0 +1,9 @@
+cooperation:
+    form:
+        login: Identifiant
+        password: Mot de passe
+        connect: Se conneter
+    login:
+        login_page: Page de connexion
+        connect_to_app: Connexion à l'application
+

@@ -1,4 +1,3 @@
 services:
     CoOperation\Bundle\UserBundle\Controller\AuthenticationController:
-        bind:
-            $authUtils: "@security.authentication_utils"
+        arguments: ['@Symfony\Component\Security\Http\Authentication\AuthenticationUtils']

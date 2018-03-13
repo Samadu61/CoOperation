@@ -2,3 +2,8 @@ login:
     path: /login
     defaults:
         _controller: CoOperationUserBundle:Authentication:login
+
+register:
+    path: /register
+    defaults:
+        _controller: CoOperationUserBundle:Authentication:register

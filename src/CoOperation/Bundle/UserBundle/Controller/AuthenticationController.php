@@ -3,6 +3,7 @@
 namespace CoOperation\Bundle\UserBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 
 class AuthenticationController extends Controller
@@ -17,7 +18,7 @@ class AuthenticationController extends Controller
         $this->authUtils = $authUtils;
     }
 
-    public function loginAction()
+    public function loginAction(): Response
     {
         $error = $this->authUtils->getLastAuthenticationError();
 
@@ -26,4 +27,8 @@ class AuthenticationController extends Controller
         return $this->render('@CoOperationUser/Authentication/login.html.twig', compact('error', 'lastUsername'));
     }
 
+    public function registerAction(): Response
+    {
+        return $this->render('@CoOperationUser/Authentication/register.html.twig');
+    }
 }
