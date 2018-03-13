@@ -1,0 +1,34 @@
+CoOperation\Bundle\UserBundle\Entity\User:
+    type: entity
+    table: users
+    repositoryClass: CoOperation\Bundle\UserBundle\Repository\UserRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        username:
+            type: string
+            length: 50
+        email:
+            type: string
+            length: 50
+        enabled:
+            type: boolean
+        createdAt:
+            type: datetime
+            column: craeted_at
+            nullable: true
+            gedmo:
+                timestampable:
+                    on: create
+        updatedAt:
+            type: datetime
+            column: updated_at
+            nullable: true
+            gedmo:
+                timestampable:
+                    on: update
+    lifecycleCallbacks: {  }

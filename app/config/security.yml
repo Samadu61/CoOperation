@@ -1,9 +1,16 @@
 # To get started with security, check out the documentation:
 # https://symfony.com/doc/current/security.html
 security:
+    encoders:
+        CoOperation\Bundle\UserBundle\Entity\User:
+            algorithm: bcrypt
 
     # https://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
     providers:
+        cooperation_provider:
+            entity:
+                class: CooperationUserBundle:User
+                property: username
         in_memory:
             memory: ~
 
@@ -14,6 +21,9 @@ security:
             security: false
 
         main:
+            pattern: ^/
+            http_basic: ~
+            provider: cooperation_provider
             logout_on_user_change: true
             anonymous: ~
             form_login:
