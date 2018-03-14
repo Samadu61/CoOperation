@@ -14,7 +14,7 @@ interface UserInterface extends
     TimestampableInterface
 {
     /**
-     * @return string
+     * @return null|string
      */
     public function getEmail(): ?string;
 
@@ -22,4 +22,24 @@ interface UserInterface extends
      * @param null|string $email
      */
     public function setEmail(?string $email): void;
+
+    /**
+     * @param null|string $username
+     */
+    public function setUsername(?string $username): void;
+
+    /**
+     * @param null|string $password
+     */
+    public function setPassword(?string $password): void;
+
+    /**
+     * @return null|string
+     */
+    public function getPlainPassword(): ?string;
+
+    /**
+     * @param null|string $plainPassword
+     */
+    public function setPlainPassword(?string $plainPassword): void;
 }

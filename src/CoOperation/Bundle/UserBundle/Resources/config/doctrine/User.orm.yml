@@ -12,14 +12,21 @@ CoOperation\Bundle\UserBundle\Entity\User:
         username:
             type: string
             length: 50
+            unique: true
         email:
             type: string
             length: 50
+            unique: true
+        password:
+            type: string
+            length: 64
         enabled:
             type: boolean
+            nullable: false
+            default: true
         createdAt:
             type: datetime
-            column: craeted_at
+            column: created_at
             nullable: true
             gedmo:
                 timestampable:
@@ -31,4 +38,14 @@ CoOperation\Bundle\UserBundle\Entity\User:
             gedmo:
                 timestampable:
                     on: update
+    properties:
+        username:
+            - NotBlank: ~
+        email:
+            - NotBlank: ~
+            - Email: ~
+        plainPassword:
+            - NotBlank: ~
+            - Length:
+                max: 4096
     lifecycleCallbacks: {  }

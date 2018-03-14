@@ -5,17 +5,12 @@
 {% endblock %}
 
 {% block body %}
-    <h1>{{ 'cooperation.login.connect_to_app'|trans }}</h1>
-    <form action="{{ path('login') }}" method="post">
-        <label for="username">{{ 'cooperation.form.login'|trans }}</label>
-        <input type="text" name="_username" id="username" placeholder="{{ 'cooperation.form.login'|trans }}"/>
+    {{ form_start(form) }}
+        {{ form_row(form.username) }}
+        {{ form_row(form.email) }}
+        {{ form_row(form.plainPassword.first) }}
+        {{ form_row(form.plainPassword.second) }}
 
-        <label>{{ 'cooperation.form.password'|trans }}</label>
-        <input type="password" name="_password" id="password" placeholder="{{ 'cooperation.form.password'|trans }}"/>
-
-        <button type="submit">Login</button>
-        {% if error %}
-            <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-        {% endif %}
-    </form>
+        <button type="submit">{{ 'cooperation.form.register'|trans }}</button>
+    {{ form_end(form) }}
 {% endblock %}

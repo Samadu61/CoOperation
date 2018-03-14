@@ -2,7 +2,9 @@ cooperation:
     form:
         login: Identifiant
         password: Mot de passe
+        password_confirmation: Confirmer le mot de passe
         connect: Se conneter
+        register: S'enregister
     login:
         login_page: Page de connexion
         connect_to_app: Connexion à l'application

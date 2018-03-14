@@ -27,6 +27,11 @@ class User implements UserInterface, Serializable
     private $password;
 
     /**
+     * @var string
+     */
+    private $plainPassword;
+
+    /**
      * Returns the username used to authenticate the user.
      *
      * @return string The username
@@ -34,6 +39,11 @@ class User implements UserInterface, Serializable
     public function getUsername()
     {
         return $this->username;
+    }
+
+    public function setUsername(?string $username): void
+    {
+        $this->username = $username;
     }
 
     /**
@@ -60,6 +70,30 @@ class User implements UserInterface, Serializable
     public function getPassword()
     {
         return $this->password;
+    }
+
+    /**
+     * @param null|string $password
+     */
+    public function setPassword(?string $password): void
+    {
+        $this->password = $password;
+    }
+
+    /**
+     * @return null|string
+     */
+    public function getPlainPassword(): ?string
+    {
+        return $this->plainPassword;
+    }
+
+    /**
+     * @param null|string $plainPassword
+     */
+    public function setPlainPassword(?string $plainPassword): void
+    {
+        $this->plainPassword = $plainPassword;
     }
 
     /**

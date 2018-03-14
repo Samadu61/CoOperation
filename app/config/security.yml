@@ -9,10 +9,8 @@ security:
     providers:
         cooperation_provider:
             entity:
-                class: CooperationUserBundle:User
+                class: CoOperationUserBundle:User
                 property: username
-        in_memory:
-            memory: ~
 
     firewalls:
         # disables authentication for assets and the profiler, adapt it according to your needs
