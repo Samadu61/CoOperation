@@ -9,5 +9,8 @@
     <body>
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
+        <script defer src="{{ asset('js/vendor.js') }}"></script>
+        <script defer src="{{ asset('js/app.js') }}"></script>
+        <script defer src="{{ asset('js/plugins.js') }}"></script>
     </body>
 </html>

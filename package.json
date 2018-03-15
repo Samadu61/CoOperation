@@ -1,8 +1,28 @@
 {
   "name": "co-operation",
   "version": "1.0.0",
-  "main": "app.js",
+  "main": "app/Resources/assets/js/app.js",
   "repository": "https://github.com/Samadu61/CoOperation.git",
   "author": "Samaël <villette.samael@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf web/dist web/fonts/vendor web/images web/icons",
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development webpack --progress --hide-modules",
+    "watch": "cross-env NODE_ENV=development webpack --watch --progress --hide-modules",
+    "watch-poll": "npm run watch -- --watch-poll",
+    "hot": "cross-env NODE_ENV=development webpack-dev-server --inline --hot",
+    "prod": "npm run production",
+    "production": "npm run clean && cross-env NODE_ENV=production webpack --progress --hide-modules"
+  },
+  "devDependencies": {
+    "cross-env": "^5.1.4",
+    "webpack": "~3.11.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.1",
+    "rimraf": "^2.6.2"
+  }
 }
