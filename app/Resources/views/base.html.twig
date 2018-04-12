@@ -9,6 +9,8 @@
 
     </head>
     <body>
+        {% include "_header.html.twig" %}
+
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
         <script defer src="{{ asset('js/vendor.js') }}"></script>

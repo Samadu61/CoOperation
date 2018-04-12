@@ -6,7 +6,7 @@
 
 {% block body %}
     <h1>{{ 'cooperation.login.connect_to_app'|trans }}</h1>
-    <form action="{{ path('login') }}" method="post">
+    <form action="{{ path('user_login') }}" method="post">
         <label for="username">{{ 'cooperation.form.login'|trans }}</label>
         <input class="form-control" type="text" name="_username" id="username" placeholder="{{ 'cooperation.form.login'|trans }}"/>
 

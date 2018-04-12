@@ -1,4 +1,5 @@
 cooperation:
+    app_name: CoOperation
     form:
         login: Identifiant
         password: Mot de passe
@@ -8,4 +9,5 @@ cooperation:
     login:
         login_page: Page de connexion
         connect_to_app: Connexion à l'application
-
+    ui:
+        home: Accueil
