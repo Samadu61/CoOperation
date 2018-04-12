@@ -1,0 +1,4 @@
+user_index:
+    path: index
+    defaults:
+        _controller: CoOperationUserBundle:User:index
