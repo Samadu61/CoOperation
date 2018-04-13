@@ -5,11 +5,16 @@
 {% endblock %}
 
 {% block body %}
-    <div class="container">
-        <div class="card">
-            <div class="card-body">
-
+    <div class="card" style="background-image: {{ asset('images/home-account.jpg') }};">
+        <div class="card-body">
+            <div class="text-center">
+                <h2>{{ 'cooperation.ui.welcome_message'|trans }}</h2>
+                <h4>{{ 'cooperation.ui.welcome_submessage'|trans }}</h4>
             </div>
         </div>
     </div>
+{% endblock %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/homepage.css') }}">
 {% endblock %}

@@ -1,8 +1,21 @@
 const path = require('path')
 const webpack = require('webpack')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const production = process.env.NODE_ENV === 'production'
+
+let dirCopyPatterns = [
+    {
+        from: 'app/Resources/assets/icons',
+        to: 'icons'
+    },
+    {
+        from: 'app/Resources/assets/images',
+        to: 'images'
+    }
+]
+
 
 let config = {
     entry: {
@@ -58,7 +71,34 @@ let config = {
                         }
                     ]
                 })
-            }
+            },
+            {
+                test: /\.(png|svg|jpe?g|gif)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: (path) => {
+                                if (!/node_modules/.test(path)) {
+                                    return 'images/[name].[ext]?[hash]'
+                                }
+
+                                return `images/vendor-${name}/` + path
+                                    .replace(/\\/g, '/')
+                                    .replace(
+                                        /((.*(node_modules))|images|image|img|assets)\//g, ''
+                                    ) + '?[hash]'
+                            }
+                        }
+                    },
+                    {
+                        loader: 'img-loader',
+                        options: {
+                            enabled: production
+                        }
+                    }
+                ]
+            },
         ]
     },
     plugins: [
@@ -72,6 +112,7 @@ let config = {
                 : 'css/[name].css',
             allChunks: true,
         }),
+        new CopyWebpackPlugin(dirCopyPatterns, { copyUnmodified: true })
     ]
 }
 

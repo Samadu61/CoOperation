@@ -11,3 +11,5 @@ cooperation:
         connect_to_app: Connexion à l'application
     ui:
         home: Accueil
+        welcome_message: Bienvenue sur le site CoOperation
+        welcome_submessage: Gérer vos comptes de groupes en toute facilité
