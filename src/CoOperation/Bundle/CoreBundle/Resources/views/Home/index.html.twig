@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block body %}
-    <div class="card" style="background-image: {{ asset('images/home-account.jpg') }};">
+    <div class="card">
         <div class="card-body">
             <div class="text-center">
                 <h2>{{ 'cooperation.ui.welcome_message'|trans }}</h2>
@@ -13,8 +13,11 @@
             </div>
         </div>
     </div>
+
+    <style>
+    body {background-image:url('{{ asset('images/home-account.jpg') }}');}
+    </style>
 {% endblock %}
 
 {% block stylesheets %}
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/homepage.css') }}">
 {% endblock %}
