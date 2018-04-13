@@ -1,4 +1,7 @@
 cooperation:
+    accounts:
+        account: Compte
+        accounts: Comptes
     app_name: CoOperation
     form:
         connect: Se conneter
@@ -6,6 +9,12 @@ cooperation:
         password: Mot de passe
         password_confirmation: Confirmer le mot de passe
         register: S'enregister
+    groups:
+        group: Groupe
+        groups: Groupes
+    lists:
+        list: Liste
+        lists: Listes
     login:
         connect_to_app: Connexion à l'application
         login_page: Page de connexion
@@ -13,5 +22,7 @@ cooperation:
         create_new_account: Création d'un nouveau compte
     ui:
         home: Accueil
+        logout: Se déconnecter
+        my_account: Mon compte
         welcome_message: Bienvenue sur le site CoOperation
         welcome_submessage: Gérer vos comptes de groupes en toute facilité
