@@ -9,9 +9,13 @@
 
     </head>
     <body>
-        {% include "_header.html.twig" %}
+        {% include "layouts/_header.html.twig" %}
 
-        {% block body %}{% endblock %}
+        <div class="container">
+            {% block body %}{% endblock %}
+        </div>
+
+
         {% block javascripts %}{% endblock %}
         <script defer src="{{ asset('js/vendor.js') }}"></script>
         <script defer src="{{ asset('js/app.js') }}"></script>
