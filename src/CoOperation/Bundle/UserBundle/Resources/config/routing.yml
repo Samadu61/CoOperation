@@ -8,6 +8,9 @@ user_register:
     defaults:
         _controller: CoOperationUserBundle:Authentication:register
 
+user_logout:
+    path: /logout
+
 user:
-    prefix: /user
+    prefix: /admin/user
     resource: "@CoOperationUserBundle/Resources/config/routing/user.yml"

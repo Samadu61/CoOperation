@@ -1,14 +1,16 @@
 cooperation:
     app_name: CoOperation
     form:
+        connect: Se conneter
         login: Identifiant
         password: Mot de passe
         password_confirmation: Confirmer le mot de passe
-        connect: Se conneter
         register: S'enregister
     login:
-        login_page: Page de connexion
         connect_to_app: Connexion à l'application
+        login_page: Page de connexion
+    register:
+        create_new_account: Création d'un nouveau compte
     ui:
         home: Accueil
         welcome_message: Bienvenue sur le site CoOperation

@@ -5,12 +5,16 @@ security:
         CoOperation\Bundle\UserBundle\Entity\User:
             algorithm: bcrypt
 
+    role_hierarchy:
+        ROLE_ADMIN:       ROLE_USER
+        ROLE_SUPER_ADMIN: ROLE_ADMIN
+
     # https://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
     providers:
         cooperation_provider:
             entity:
                 class: CoOperationUserBundle:User
-                property: username
+                property: email
 
     firewalls:
         # disables authentication for assets and the profiler, adapt it according to your needs
@@ -25,8 +29,12 @@ security:
             logout_on_user_change: true
             anonymous: ~
             form_login:
-                login_path: login
-                check_path: login
+                csrf_token_generator: security.csrf.token_manager
+                login_path: user_login
+                check_path: user_login
+            logout:
+                path: /logout
+                target: /
             # activate different ways to authenticate
 
             # https://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticate
@@ -34,3 +42,5 @@ security:
 
             # https://symfony.com/doc/current/security/form_login_setup.html
             #form_login: ~
+    access_control:
+        - { path: ^/admin/, roles: ROLE_ADMIN }

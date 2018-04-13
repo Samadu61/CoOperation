@@ -5,12 +5,20 @@
 {% endblock %}
 
 {% block body %}
-    {{ form_start(form) }}
-        {{ form_row(form.username) }}
-        {{ form_row(form.email) }}
-        {{ form_row(form.plainPassword.first) }}
-        {{ form_row(form.plainPassword.second) }}
-
-        <button type="submit">{{ 'cooperation.form.register'|trans }}</button>
-    {{ form_end(form) }}
+    <div class="card">
+        {{ form_start(form) }}
+        <div class="card-header">
+            <h3>{{ 'cooperation.register.create_new_account'|trans }}</h3>
+        </div>
+        <div class="card-body">
+            {{ form_row(form.username) }}
+            {{ form_row(form.email) }}
+            {{ form_row(form.plainPassword.first) }}
+            {{ form_row(form.plainPassword.second) }}
+        </div>
+        <div class="card-footer">
+            {{ form_row(form.save, { 'label': 'cooperation.form.register'|trans}) }}
+        </div>
+        {{ form_end(form) }}
+    </div>
 {% endblock %}
