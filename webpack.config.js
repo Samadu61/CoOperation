@@ -23,6 +23,9 @@ let config = {
             './app/Resources/assets/scss/app/app.scss',
             './app/Resources/assets/js/app.js'
         ],
+        home: [
+            './app/Resources/assets/scss/home/homepage.scss'
+        ],
         plugins: [
             './app/Resources/assets/js/check-integrity.js'
         ],
