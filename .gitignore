@@ -2,6 +2,8 @@
 /.idea
 /.web-server-pid
 /app/config/parameters.yml
+/app/Resources/assets/icons
+/app/Resources/assets/images
 /build/
 /phpunit.xml
 /var/*
@@ -19,4 +21,6 @@
 /web/bundles/
 /web/js
 /web/css
+/web/images
+/web/icons
 yarn-error.log
