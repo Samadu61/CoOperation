@@ -5,19 +5,45 @@
 {% endblock %}
 
 {% block body %}
-    <h1>{{ 'cooperation.login.connect_to_app'|trans }}</h1>
-    <form action="{{ path('user_login') }}" method="post">
-        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
-
-        <label for="username">{{ 'cooperation.form.login'|trans }}</label>
-        <input class="form-control" type="text" name="_username" id="username" placeholder="{{ 'cooperation.form.login'|trans }}"/>
-
-        <label>{{ 'cooperation.form.password'|trans }}</label>
-        <input type="password" name="_password" id="password" placeholder="{{ 'cooperation.form.password'|trans }}"/>
-
-        <button type="submit">Login</button>
-        {% if error %}
-            <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-        {% endif %}
-    </form>
+    <div class="row justify-content-md-center">
+        <div class="col-lg-8">
+            <div class="card">
+                <form action="{{ path('user_login') }}" method="post">
+                    <div class="card-header">
+                        <h1>{{ 'cooperation.login.connect_to_app'|trans }}</h1>
+                    </div>
+                    <div class="card-body">
+                        <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+                        {% if error %}
+                            <div class="alert alert-danger" role="alert">
+                                {{ error.messageKey|trans(error.messageData, 'security') }}
+                            </div>
+                        {% endif %}
+                        <div class="form-group row">
+                            <label class="col-lg-3" for="username">{{ 'cooperation.form.email'|trans }}</label>
+                            <div class="col-lg-9">
+                                <input class="form-control" type="text" name="_username" id="username" placeholder="{{ 'cooperation.form.email'|trans }}"/>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-lg-3" for="password">{{ 'cooperation.form.password'|trans }}</label>
+                            <div class="col-lg-9">
+                                <input class="form-control" type="password" name="_password" id="password" placeholder="{{ 'cooperation.form.password'|trans }}"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <span>{{ 'cooperation.ui.not_register_yet'|trans }}</span> <a href="{{ path('user_register') }}">{{ 'cooperation.ui.sign_up'|trans }}</a>
+                            </div>
+                            <div class="col-lg-6 text-right">
+                                <button type="submit" class="btn btn-sm btn-primary">{{ 'cooperation.form.connect'|trans }}</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 {% endblock %}

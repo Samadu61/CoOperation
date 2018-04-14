@@ -4,7 +4,8 @@ cooperation:
         accounts: Comptes
     app_name: CoOperation
     form:
-        connect: Se conneter
+        connect: Se connecter
+        email: Email
         login: Identifiant
         password: Mot de passe
         password_confirmation: Confirmer le mot de passe
@@ -21,8 +22,13 @@ cooperation:
     register:
         create_new_account: Création d'un nouveau compte
     ui:
+        already_an_account: Vous avez déjà un compte ?
         home: Accueil
         logout: Se déconnecter
+        not_register_yet: Pas encore inscrit ?
         my_account: Mon compte
+        sign_in: Se connecter
+        sign_up: Créer un compte
         welcome_message: Bienvenue sur le site CoOperation
         welcome_submessage: Gérer vos comptes de groupes en toute facilité
+        you_have_been_logout: Vous avez été déconnecté

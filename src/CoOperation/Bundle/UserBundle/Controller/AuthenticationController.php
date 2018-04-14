@@ -4,6 +4,7 @@ namespace CoOperation\Bundle\UserBundle\Controller;
 
 use CoOperation\Bundle\UserBundle\Entity\User;
 use CoOperation\Bundle\UserBundle\Form\Type\UserType;
+use DateTime;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -46,6 +47,8 @@ class AuthenticationController extends Controller
         if ($form->isSubmitted() && $form->isValid()) {
             $password = $this->passwordEncoder->encodePassword($user, $user->getPlainPassword());
             $user->setPassword($password);
+            $user->setCreatedAt(new DateTime);
+            $user->setUpdatedAt(new DateTime);
 
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($user);

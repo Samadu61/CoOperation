@@ -17,7 +17,14 @@
             {{ form_row(form.plainPassword.second) }}
         </div>
         <div class="card-footer">
-            {{ form_row(form.save, { 'label': 'cooperation.form.register'|trans}) }}
+            <div class="row">
+                <div class="col-lg-6">
+                    <span>{{ 'cooperation.ui.already_an_account'|trans }}</span> <a href="{{ path('user_login') }}">{{ 'cooperation.ui.sign_in'|trans }}</a>
+                </div>
+                <div class="col-lg-6">
+                    {{ form_row(form.save, { 'label': 'cooperation.form.register'|trans}) }}
+                </div>
+            </div>
         </div>
         {{ form_end(form) }}
     </div>
