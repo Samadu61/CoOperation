@@ -42,4 +42,14 @@ interface UserInterface extends
      * @param null|string $plainPassword
      */
     public function setPlainPassword(?string $plainPassword): void;
+
+    /**
+     * @return int
+     */
+    public function getRole(): int;
+
+    /**
+     * @param int $role
+     */
+    public function setRole(int $role): void;
 }

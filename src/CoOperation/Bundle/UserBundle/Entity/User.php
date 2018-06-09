@@ -11,6 +11,10 @@ class User implements UserInterface, Serializable
 {
     use ResourceTrait, TimestampableTrait, ToggleableTrait;
 
+    public const ROLE_USER = 1;
+    public const ROLE_ADMIN = 2;
+    public const ROLE_SUPER_ADMIN = 3;
+
     /**
      * @var string
      */
@@ -30,6 +34,11 @@ class User implements UserInterface, Serializable
      * @var string
      */
     private $plainPassword;
+
+    /**
+     * @var int
+     */
+    private $role;
 
     /**
      * Returns the username used to authenticate the user.
@@ -97,13 +106,39 @@ class User implements UserInterface, Serializable
     }
 
     /**
+     * @return int
+     */
+    public function getRole(): int
+    {
+        return $this->role;
+
+    }
+
+    /**
+     * @param int $role
+     */
+    public function setRole(int $role): void
+    {
+        $this->role = $role;
+    }
+
+    /**
      * Returns the roles granted to the user.
      *
-     * @return (Role|string)[] The user roles
+     * @return array (Role|string)[] The user roles
      */
     public function getRoles()
     {
-        return array('ROLE_USER');
+        switch ($this->getRole()) {
+            case self::ROLE_USER:
+                return array('ROLE_USER');
+            case self::ROLE_ADMIN:
+                return array('ROLE_ADMIN');
+            case self::ROLE_SUPER_ADMIN:
+                return array('ROLE_SUPER_ADMIN');
+            default:
+                return array('ROLE_USER');
+        }
     }
 
     /**

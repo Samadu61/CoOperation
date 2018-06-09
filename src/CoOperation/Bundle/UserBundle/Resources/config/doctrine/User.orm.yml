@@ -23,7 +23,13 @@ CoOperation\Bundle\UserBundle\Entity\User:
         enabled:
             type: boolean
             nullable: false
-            default: true
+            options:
+                default: true
+        role:
+            type: integer
+            nullable: false
+            options:
+                default: 1
         createdAt:
             type: datetime
             column: created_at
