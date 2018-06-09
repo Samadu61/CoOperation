@@ -9,7 +9,7 @@ trait ResourceTrait
      */
     protected $id;
 
-    public function getId(): integer
+    public function getId(): int
     {
         return $this->id;
     }
