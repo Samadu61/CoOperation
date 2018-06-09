@@ -30,6 +30,11 @@ class AuthenticationController extends Controller
 
     public function loginAction(): Response
     {
+        $authorizationChecker = $this->container->get('security.authorization_checker');
+        if ($authorizationChecker->isGranted('ROLE_USER')) {
+            return $this->redirectToRoute('core_homepage');
+        }
+
         $error = $this->authUtils->getLastAuthenticationError();
 
         $lastUsername = $this->authUtils->getLastUsername();
@@ -39,6 +44,11 @@ class AuthenticationController extends Controller
 
     public function registerAction(Request $request): Response
     {
+        $authorizationChecker = $this->container->get('security.authorization_checker');
+        if ($authorizationChecker->isGranted('ROLE_USER')) {
+            return $this->redirectToRoute('core_homepage');
+        }
+
         $user = new User();
         $form = $this->createForm(UserType::class, $user);
 
