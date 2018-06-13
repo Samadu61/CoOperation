@@ -1,3 +1,6 @@
 services:
     CoOperation\Bundle\UserBundle\Controller\AuthenticationController:
         arguments: ['@Symfony\Component\Security\Http\Authentication\AuthenticationUtils', '@security.password_encoder']
+    cooperation.handler.logout_success_handler:
+        class: CoOperation\Bundle\UserBundle\Security\LogoutHandler
+        arguments: ['@translator', '@router.default']
