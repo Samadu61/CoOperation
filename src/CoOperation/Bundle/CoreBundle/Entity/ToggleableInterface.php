@@ -5,9 +5,9 @@ namespace CoOperation\Bundle\CoreBundle\Entity;
 interface ToggleableInterface
 {
     /**
-     * @return bool
+     * @return bool|null
      */
-    public function isEnabled(): bool;
+    public function isEnabled(): ?bool;
 
     /**
      * @param bool $enabled

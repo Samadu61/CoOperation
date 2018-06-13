@@ -5,7 +5,7 @@ namespace CoOperation\Bundle\CoreBundle\Entity;
 interface ResourceInterface
 {
     /**
-     * @return integer
+     * @return int|null
      */
-    public function getId();
+    public function getId(): ?int;
 }

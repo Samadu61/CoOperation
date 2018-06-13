@@ -12,7 +12,7 @@ trait ToggleableTrait
     /**
      * @return bool
      */
-    public function isEnabled(): bool
+    public function isEnabled(): ?bool
     {
         return $this->enabled;
     }
