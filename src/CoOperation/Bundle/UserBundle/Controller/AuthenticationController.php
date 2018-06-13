@@ -57,6 +57,7 @@ class AuthenticationController extends Controller
         if ($form->isSubmitted() && $form->isValid()) {
             $password = $this->passwordEncoder->encodePassword($user, $user->getPlainPassword());
             $user->setPassword($password);
+            $user->setRole(User::ROLE_USER);
             $user->setCreatedAt(new DateTime);
             $user->setUpdatedAt(new DateTime);
 
