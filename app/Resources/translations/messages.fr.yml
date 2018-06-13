@@ -14,10 +14,17 @@ cooperation:
     groups:
         group: Groupe
         groups: Groupes
+    links:
+      add: Ajouter
+      delmod: Modifier/Supprimer
+      generalview: Gestion
     lists:
         list: Liste
         lists: Listes
         my_lists: Mes listes
+        new: Nouvelle liste
+        labels:
+          name: Nom de la liste
     login:
         connect_to_app: Connexion à l'application
         login_page: Page de connexion
