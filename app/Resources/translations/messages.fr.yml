@@ -17,6 +17,7 @@ cooperation:
     lists:
         list: Liste
         lists: Listes
+        my_lists: Mes listes
     login:
         connect_to_app: Connexion à l'application
         login_page: Page de connexion

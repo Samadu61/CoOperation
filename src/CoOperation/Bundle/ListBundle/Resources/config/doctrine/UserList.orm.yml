@@ -1,0 +1,51 @@
+CoOperation\Bundle\ListBundle\Entity\UserList:
+    type: entity
+    table: lists
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: 50
+            nullable: false
+        createdAt:
+            type: datetime
+            column: created_at
+            nullable: true
+            gedmo:
+                timestampable:
+                    on: create
+        updatedAt:
+            type: datetime
+            column: updated_at
+            nullable: true
+            gedmo:
+                timestampable:
+                    on: update
+        deletedAt:
+            type: datetime
+            column: deleted_at
+            nullable: true
+    manyToOne:
+        owner:
+            targetEntity: CoOperation\Bundle\UserBundle\Entity\User
+            inversedBy: lists
+            joinColumn:
+                name: owner_id
+                nullable: false
+    manyToMany:
+        users:
+            targetEntity: CoOperation\Bundle\UserBundle\Entity\User
+            inversedBy: lists
+            joinTable:
+                name: user_list
+                joinColumns:
+                    list_id:
+                        referencedColumnName: id
+                inversedJoinColumns:
+                    user_id:
+                        referencedColumnName: id

@@ -19,6 +19,7 @@ class AppKernel extends Kernel
 
             new CoOperation\Bundle\UserBundle\CoOperationUserBundle(),
             new CoOperation\Bundle\CoreBundle\CoOperationCoreBundle(),
+            new CoOperation\Bundle\ListBundle\CoOperationListBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

@@ -1,0 +1,4 @@
+list_index:
+    path: /
+    defaults:
+        _controller: CoOperationListBundle:List:index

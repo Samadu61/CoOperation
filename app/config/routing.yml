@@ -1,7 +1,9 @@
 core:
     resource: "@CoOperationCoreBundle/Resources/config/routing.yml"
     prefix:   /
-
 user:
     resource: "@CoOperationUserBundle/Resources/config/routing.yml"
     prefix:   /
+list:
+    resource: "@CoOperationListBundle/Resources/config/routing.yml"
+    prefix:   /lists
