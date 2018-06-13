@@ -2,3 +2,15 @@ list_index:
     path: /
     defaults:
         _controller: CoOperationListBundle:List:index
+
+list_new:
+    path: /newlist
+    defaults:
+        _controller: CoOperationListBundle:List:new
+
+list_view:
+    path: /viewlist/{id}
+    defaults:
+        _controller: CoOperationListBundle:List:view
+  #  requierements:
+  #      id: /d+/
