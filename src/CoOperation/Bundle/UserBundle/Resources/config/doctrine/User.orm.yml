@@ -44,6 +44,10 @@ CoOperation\Bundle\UserBundle\Entity\User:
             gedmo:
                 timestampable:
                     on: update
+        deletedAt:
+            type: datetime
+            column: deleted_at
+            nullable: true
     properties:
         username:
             - NotBlank: ~

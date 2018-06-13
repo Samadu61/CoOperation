@@ -2,6 +2,7 @@
 
 namespace CoOperation\Bundle\UserBundle\Entity;
 
+use CoOperation\Bundle\CoreBundle\Entity\DeletableInterface;
 use CoOperation\Bundle\CoreBundle\Entity\ResourceInterface;
 use CoOperation\Bundle\CoreBundle\Entity\TimestampableInterface;
 use CoOperation\Bundle\CoreBundle\Entity\ToggleableInterface;
@@ -11,7 +12,8 @@ interface UserInterface extends
     ResourceInterface,
     SecurityUserInterface,
     ToggleableInterface,
-    TimestampableInterface
+    TimestampableInterface,
+    DeletableInterface
 {
     /**
      * @return null|string

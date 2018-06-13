@@ -2,6 +2,7 @@
 
 namespace CoOperation\Bundle\UserBundle\Entity;
 
+use CoOperation\Bundle\CoreBundle\Entity\DeletableTrait;
 use CoOperation\Bundle\CoreBundle\Entity\ResourceTrait;
 use CoOperation\Bundle\CoreBundle\Entity\TimestampableTrait;
 use CoOperation\Bundle\CoreBundle\Entity\ToggleableTrait;
@@ -9,7 +10,7 @@ use Serializable;
 
 class User implements UserInterface, Serializable
 {
-    use ResourceTrait, TimestampableTrait, ToggleableTrait;
+    use ResourceTrait, TimestampableTrait, ToggleableTrait, DeletableTrait;
 
     public const ROLE_USER = 1;
     public const ROLE_ADMIN = 2;
