@@ -1,16 +1,7 @@
-user_login:
-    path: /login
-    defaults:
-        _controller: CoOperationUserBundle:Authentication:login
+user_authentification:
+    prefix: /authentication
+    resource: "@CoOperationUserBundle/Resources/config/routing/authentication.yml"
 
-user_register:
-    path: /register
-    defaults:
-        _controller: CoOperationUserBundle:Authentication:register
-
-user_logout:
-    path: /logout
-
-user:
+admin_user:
     prefix: /admin/user
     resource: "@CoOperationUserBundle/Resources/config/routing/user.yml"

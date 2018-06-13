@@ -1,0 +1,12 @@
+user_login:
+    path: /login
+    defaults:
+        _controller: CoOperationUserBundle:Authentication:login
+
+user_register:
+    path: /register
+    defaults:
+        _controller: CoOperationUserBundle:Authentication:register
+
+user_logout:
+    path: /logout
