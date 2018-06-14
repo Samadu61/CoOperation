@@ -7,3 +7,6 @@ user:
 list:
     resource: "@CoOperationListBundle/Resources/config/routing.yml"
     prefix:   /lists
+account:
+    resource: "@CoOperationAccountBundle/Resources/config/routing.yml"
+    prefix:   /accounts
