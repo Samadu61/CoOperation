@@ -17,7 +17,7 @@
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{{ path('list_new') }}">{{ 'cooperation.links.add'|trans }}</a>
-                            <a class="dropdown-item" href="#">{{ 'cooperation.links.generalview'|trans }}</a>
+                            <a class="dropdown-item" href="{{ path('list_view') }}">{{ 'cooperation.links.generalview'|trans }}</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
@@ -25,8 +25,8 @@
                             {{ 'cooperation.groups.groups'|trans }}
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">{{ 'cooperation.links.add'|trans }}</a>
-                            <a class="dropdown-item" href="#">{{ 'cooperation.links.generalview'|trans }}</a>
+                            <a class="dropdown-item" href="{{ path('group_new') }}">{{ 'cooperation.links.add'|trans }}</a>
+                            <a class="dropdown-item" href="{{ path('group_view') }}">{{ 'cooperation.links.generalview'|trans }}</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
@@ -34,8 +34,8 @@
                             {{ 'cooperation.accounts.accounts'|trans }}
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">{{ 'cooperation.links.add'|trans }}</a>
-                            <a class="dropdown-item" href="#">{{ 'cooperation.links.generalview'|trans }}</a>
+                            <a class="dropdown-item" href="{{ path('account_new') }}">{{ 'cooperation.links.add'|trans }}</a>
+                            <a class="dropdown-item" href="{{ path('account_view') }}">{{ 'cooperation.links.generalview'|trans }}</a>
                         </div>
                     </li>
                     {% endif %}

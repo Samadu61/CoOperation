@@ -14,3 +14,27 @@ list_view:
         _controller: CoOperationListBundle:List:view
   #  requierements:
   #      id: /d+/
+
+group_new:
+    path: /newgroup
+    defaults:
+        _controller: CoOperationGroupBundle:Group:new
+
+group_view:
+    path: /viewgroup/{id}
+    defaults:
+        _controller: CoOperationGroupBundle:Group:view
+  #  requierements:
+  #      id: /d+/
+
+account_new:
+    path: /newaccount
+    defaults:
+        _controller: CoOperationAccountBundle:Account:new
+
+account_view:
+    path: /viewaccount/{id}
+    defaults:
+        _controller: CoOperationAccountBundle:Account:view
+    #  requierements:
+    #      id: /d+/
