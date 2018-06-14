@@ -23,6 +23,7 @@ cooperation:
         lists: Listes
         my_lists: Mes listes
         new: Nouvelle liste
+        view: Aperçu de la liste
         labels:
           name: Nom de la liste
     login:

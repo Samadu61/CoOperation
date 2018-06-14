@@ -54,7 +54,11 @@ class ListController extends Controller
 
     public function viewAction($id)
     {
-        /*$em = $this->getDoctrine()->getManager();
-        $list = $em->find()*/
+        $em = $this->getDoctrine()->getRepository();
+        $list = $em->find($id);
+
+        return $this->render('@CoOperationList/List/newlist.html.twig', array(
+              'list' => $list,
+        ));
     }
 }
