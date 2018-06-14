@@ -45,7 +45,7 @@ class ListController extends Controller
 
         return $this->redirectToRoute('list_view', array('id' => $list->getId())); */
       }
-    }
+
 
     return $this->render('@CoOperationList/List/newlist.html.twig', array(
       'form' => $form->createView(),
